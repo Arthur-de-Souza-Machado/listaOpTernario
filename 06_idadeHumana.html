@@ -8,11 +8,13 @@
     // - cães grandes: fator 7.
 
     //Entrada
-
-
+    const dog = Number(prompt(`Informe a idade do seu cachorro:`).trim());
+    const porte = prompt(`Informe o porte do seu cachorro: (Pequeno-P Medio-M Grande-G)`).trim().toUpperCase();
     //Processamento
-
-    
+    let mensagemFinal = (porte === "P") ? `A idade humana do seu cachorro é de ${dog * 5}`
+    : (porte === "M") ? `A idade humana do seu cachorro é de ${dog * 6}`
+    : (porte === "G") ? `A idade humana do seu cachorro é de ${dog * 7}`
+    : "Caracter invalido";
     //Saída
-
+    document.write(mensagemFinal);
 </script>

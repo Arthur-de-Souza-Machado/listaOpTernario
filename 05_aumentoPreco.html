@@ -8,11 +8,13 @@
         //- acima de 1500: aumento de 5 %
     
     //Entrada
-
-
+    const preco = Number(prompt(`Informe o preço do produto:`));
     //Processamento
-
-    
+    let mansagemFinal = (preco <= 280) ? `O aumento sera de R$${preco * 0.2 + preco}`
+    : (preco <= 700) ? `O aumento sera de R$${preco * 0.15 + preco}`
+    : (preco <= 1500) ? `O aumento sera de R$${preco * 0.10 + preco}`
+    : (preco > 1500) ? `O aumento sera de R$${preco * 0.05 + preco}`
+    : "Caracter invalido";
     //Saída
-
+    document.write(mansagemFinal);
 </script>
