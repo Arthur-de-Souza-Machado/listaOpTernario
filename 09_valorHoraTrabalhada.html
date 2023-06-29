@@ -8,11 +8,13 @@
     // Apresente o salário final recebido pelo funcionário semanalmente e o preço de cada hora trabalhada.
 
     //Entrada
-
-
+    const horaTrabalhada = Number(prompt(`Informe a quantidade de horas trabalhadas semanalmente:`).trim().replace(",","."));
+    const recebeHoraTrabalhada = Number(prompt(`Informe quanto que recebe por hora trabalhada:`).trim().replace(",","."));
     //Processamento
-
-    
+    let mensagemFinal = (horaTrabalhada <= 45) ? `Não haverá adicional`
+    : (horaTrabalhada <= 60) ? `O salario final é de R$${((horaTrabalhada * recebeHoraTrabalhada) * 1.2).toFixed(2)} e o preço de cada hora trabalhada é dde R$${(recebeHoraTrabalhada * 0.20 + recebeHoraTrabalhada).toFixed(2)}`
+    : (horaTrabalhada > 60) ? `O salario final é de R$${((horaTrabalhada * recebeHoraTrabalhada) * 1.3).toFixed(2)} e o preço de cada hora trabalhada é dde R$${(recebeHoraTrabalhada * 0.30 + recebeHoraTrabalhada).toFixed(2)}`
+    : "Caracter invalido";
     //Saída
-
+    document.write(mensagemFinal);
 </script>

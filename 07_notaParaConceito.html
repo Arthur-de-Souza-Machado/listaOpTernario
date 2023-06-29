@@ -10,11 +10,15 @@
     // Entre 5.9 e zero            E
 
     //Entrada
-
+    const nota = Number(prompt(`Informe a sua nota:`).trim().replace(",","."));
 
     //Processamento
-
-    
+    let mensagemFinal = (nota >= 9.0 || nota == 10) ? `Conceito A`
+    : (nota <= 8.9 || nota >= 8.0) ? `Conceito B`
+    : (nota <= 7.9 || nota >= 7.0) ? `Conceito C`
+    : (nota <= 6.9 || nota >= 6.0) ? `Conceito D`
+    : (nota <= 5.9 || nota >= 0) ? `Conceito E`
+    : "Caracter invalido";
     //Saída
-
+    document.write(mensagemFinal);
 </script>

@@ -10,11 +10,17 @@
     // Verifique se o usuário ganha mais do que recebe e apresente em tela, indicando quanto que sobrou após o pagamento das contas ou quanto que faltou para poder pagar todas as contas previstas.
 
     //Entrada
-
-
+    const agua = Number(prompt(`Informe a conta de agua:`).trim().replace(",","."));
+    const energiaElétrica = Number(prompt(`Informe a conta da energia elétrica:`).trim().replace(",","."));
+    const telefone = Number(prompt(`Informe a conta da telefone:`).trim().replace(",","."));
+    const supermercado = Number(prompt(`Informe a conta de Supermercado:`).trim().replace(",","."));
+    const salario = Number(prompt(`Informe o valor que recebe de remuneração mensal (salário):`).trim().replace(",","."));
     //Processamento
-
-    
+    let calculo1 = agua + energiaElétrica + telefone + supermercado
+    let calculo2 = salario - calculo1
+    let mensagemFinal = (calculo1 < salario) ? `Voce ganha mais do que gasta sobrou do seu salario o valor de R$${calculo2.toFixed(2)}`
+    : (calculo1 > salario) ? `Voce gasta mais do que recebe faltou para poder pagar todas as contas previstas o valor de R$${calculo2 * -1 .toFixed(2)}`
+    : "Caracter invalido";
     //Saída
-    
+    document.write(mensagemFinal);
 </script>
