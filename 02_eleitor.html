@@ -7,7 +7,10 @@
     //Entrada
     const anoNascimento = Number(prompt(`Informe qual seu ano de nascimento:`));
     //Processamento
-    
+    let calculo1 = 2023 - anoNascimento
+    let mensagemFinal =  (calculo1 >= 16) ? `Podera votar no ano atual`
+    : (calculo1 < 16) ? `Não podera votar no ano atual`
+    : "Caracter invalido";
     //Saída
-
+    document.write(mansagemFinal);
 </script>
